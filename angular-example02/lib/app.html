@@ -1,1 +1,17 @@
-<h1>My First Angular 2 App</h1>
+<div *ngIf="hoge1 != null">表示1</div>
+<div *ngIf="hoge1 == null">非表示</div>
+<div *ngIf="isDisplay('str')">表示2</div>
+<div *ngIf="isDisplay('strs')">非表示</div>
+<div *ngIf="isDisplayByBool(hoge3)">表示3</div>
+<div *ngIf="isDisplayByBool(isProduction())">非表示</div>
+<div *ngIf="isDisplayByBool(isSample())">表示4</div>
+<div template="ngIf:hoge1 != null">表示5</div>
+<template [ngIf]="hoge1 != null">
+    <div>表示6</div>
+</template>
+<!--
+ エラー
+<div *ngIf="hoge1">エラー</div>
+<div *ngIf="isDisplay(str)">エラー</div>
+<div *ngIf="getString()">エラー</div>
+ -->
