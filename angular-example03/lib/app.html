@@ -1,0 +1,18 @@
+<h3>Angular2 Dart *ngFor</h3>
+<div *ngFor="let lang of languages">
+    {{lang.id}}:<span style="font-weight: bold;">{{lang.name}}</span>
+</div>
+
+<p></p>
+
+<h3>Angular2 Dart *ngFor メソッド呼び出し</h3>
+<div *ngFor="let lang of simpleMethodCall()">
+    {{lang.id}}:<span style="font-weight: bold;">{{lang.name}}</span>
+</div>
+
+<p></p>
+
+<h3>Angular2 Dart *ngFor メソッド呼び出し（引数）</h3>
+<div *ngFor="let lang of filter('a')">
+    {{lang.id}}:<span style="font-weight: bold;">{{lang.name}}</span>
+</div>
