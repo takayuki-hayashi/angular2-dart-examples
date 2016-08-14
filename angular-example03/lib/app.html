@@ -16,3 +16,12 @@
 <div *ngFor="let lang of filter('a')">
     {{lang.id}}:<span style="font-weight: bold;">{{lang.name}}</span>
 </div>
+
+<p></p>
+
+<h3>Angular2 Dart *ngFor いろんな変数</h3>
+<div *ngFor="let lang of languages; let i=index; let f=first; let l=last; let e=even; let o=odd">
+    {{lang.id}}:<span style="font-weight: bold;">{{lang.name}};index={{i}};first={{f}};last={{l}};even={{e}};odd={{o}}</span>
+</div>
+
+<p></p>
