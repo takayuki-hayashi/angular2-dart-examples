@@ -2,6 +2,27 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 import 'package:angular2/core.dart';
+import 'package:angular_example04/app_service.dart';
+import 'dart:async';
 
-@Component(selector: 'app', templateUrl: 'app.html')
-class App {}
+@Component(
+    selector: 'app',
+    templateUrl: 'app.html',
+    providers: const[AppService])
+class App implements OnInit{
+
+  List<String> messages;
+
+  final AppService _appService;
+
+  App(this._appService);
+
+  Future<Null> initMessages() async {
+    messages = _appService.getMessages();
+  }
+
+  @override
+  void ngOnInit() {
+    initMessages();
+  }
+}
