@@ -1,5 +1,5 @@
-name: angular_example
-description: Angular2 dart example
+name: angular_example04
+description: Angular2 dart example DI
 version: 0.0.1
 environment:
   sdk: '>=1.13.0 <2.0.0'
