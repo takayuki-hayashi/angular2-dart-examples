@@ -4,25 +4,11 @@
 import 'package:angular2/core.dart';
 import 'package:angular_example04/app_service.dart';
 import 'dart:async';
+import 'package:angular_example04/app_sub1.dart';
+import 'package:angular_example04/app_sub2.dart';
 
 @Component(
     selector: 'app',
     templateUrl: 'app.html',
-    providers: const[AppService])
-class App implements OnInit{
-
-  List<String> messages;
-
-  final AppService _appService;
-
-  App(this._appService);
-
-  Future<Null> initMessages() async {
-    messages = _appService.getMessages();
-  }
-
-  @override
-  void ngOnInit() {
-    initMessages();
-  }
-}
+    directives: const[AppSub1,AppSub2])
+class App {}
