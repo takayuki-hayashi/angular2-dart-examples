@@ -6,9 +6,10 @@ import 'package:angular_example04/app_service.dart';
 import 'dart:async';
 import 'package:angular_example04/app_sub1.dart';
 import 'package:angular_example04/app_sub2.dart';
+import 'package:angular_example04/app_sub_parent.dart';
 
 @Component(
     selector: 'app',
     templateUrl: 'app.html',
-    directives: const[AppSub1,AppSub2])
+    directives: const[AppSub1,AppSub2, AppSubParent])
 class App {}

@@ -21,3 +21,9 @@ class NestedAppService {
 class RequestService {
   Future<List<String>> getStrings() async => ["data01","data02"];
 }
+
+@Injectable()
+class SimpleRequestService extends RequestService{
+  @override
+  Future<List<String>> getStrings() async => ["simpleData01","simpleData02"];
+}
