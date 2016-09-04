@@ -8,8 +8,7 @@ import 'dart:async';
 @Component(
     selector: 'app-sub4',
     templateUrl: 'app_sub4.html',
-//    providers: const[NestedAppService, SimpleRequestService]
-    providers: const[NestedAppService, const Provider(RequestService, useClass: SimpleRequestService)]
+    providers: const[ NestedAppService, const Provider(RequestService, useClass: SimpleRequestService)]
 )
 class AppSub4 implements OnInit{
 
@@ -21,7 +20,6 @@ class AppSub4 implements OnInit{
 
   Future<Null> initMessages() async {
     messages = await _appService.getMessages();
-    messages.add("04data");
   }
 
   @override

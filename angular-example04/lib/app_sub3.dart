@@ -19,7 +19,7 @@ class AppSub3 implements OnInit{
 
   Future<Null> initMessages() async {
     messages = await _appService.getMessages();
-    print(_appService.hashCode);
+//    print(_appService.hashCode);
   }
 
   @override
